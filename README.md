@@ -2,6 +2,18 @@
 
 Herramienta web para escanear una red local mediante ping masivo en paralelo. Desarrollada para **Ixtanet**.
 
+---
+
+> ## Aviso Legal / Disclaimer
+>
+> Esta herramienta esta disenada exclusivamente para su uso en redes propias o redes sobre las cuales el usuario tiene autorizacion expresa del administrador o propietario.
+>
+> **El uso de esta herramienta sobre redes de terceros sin autorizacion puede constituir un delito informatico** segun la legislacion vigente en cada pais (acceso no autorizado a sistemas informaticos).
+>
+> El autor no se responsabiliza por el uso indebido de esta herramienta. El usuario asume toda la responsabilidad legal derivada de su uso.
+
+---
+
 ## Caracteristicas
 
 - Seleccion de mascara CIDR desde /16 hasta /30
