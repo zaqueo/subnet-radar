@@ -1,26 +1,71 @@
-# Subnet Radar
+﻿# Subnet Radar
 
-Herramienta web para escanear subnets remotas mediante ping masivo. Desarrollada para **Ixtanet**.
+Herramienta web para escanear subnets remotas mediante ping masivo en paralelo. Desarrollada para **Ixtanet**.
 
-## Características
+## Caracteristicas
 
-- Escaneo de hasta 254 IPs en paralelo (50 hilos)
-- Interfaz web moderna con Bootstrap 5
+- Seleccion de mascara CIDR desde /16 hasta /30
+- Escaneo en paralelo con 50 hilos simultaneos
+- Estimacion de tiempo segun el tamano de la red
 - Links directos a cada equipo detectado
-- Compatible con Windows y Linux
+- Compatible con Windows y Linux/macOS
 
-## Instalación
+---
+
+## Requisitos
+
+- Python 3.8 o superior
+- pip
+
+---
+
+## Instalacion y uso
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/zaqueo/subnet-radar.git
+cd subnet-radar
+```
+
+### 2. Instalar dependencias
 
 ```bash
 pip install flask
 ```
 
-## Uso
+### 3. Lanzar la aplicacion
 
 ```bash
 python app_escaner.py
 ```
 
-Luego abre tu navegador en: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+### 4. Abrir en el navegador
 
-Ingresá el rango de red (ej: `100.100.100.0/24`) y hacé clic en **Escanear Red Ahora**.
+Entra a: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+---
+
+## Como usarlo
+
+1. Ingresa la **direccion de red base** (ej: `192.168.1.0`)
+2. Selecciona la **mascara CIDR** en el desplegable (ej: `/24` para 254 hosts)
+3. La herramienta te muestra cuantas IPs se van a escanear y el tiempo estimado
+4. Hace clic en **Escanear Red Ahora**
+5. Los equipos activos apareceran como links directos a su interfaz web
+
+> **Nota:** Para redes grandes (/20 o menor) el escaneo puede tardar varios minutos.
+> Asegurate de tener conectividad al tunel antes de escanear.
+
+---
+
+## Mascaras disponibles
+
+| CIDR | Hosts | Tiempo estimado |
+|------|-------|----------------|
+| /30  | 2     | ~1 seg          |
+| /28  | 14    | ~1 seg          |
+| /24  | 254   | ~15 seg         |
+| /22  | 1.022 | ~1 min          |
+| /20  | 4.094 | ~4 min          |
+| /16  | 65.534| ~65 min         |
