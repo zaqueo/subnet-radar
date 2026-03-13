@@ -35,7 +35,7 @@ HTML_TEMPLATE = """
 
             <div class="mb-3">
                 <label class="form-label fw-bold">Direccion de Red Base:</label>
-                <input type="text" class="form-control form-control-lg text-center" id="ipBase" value="100.100.100.0" placeholder="Ej: 192.168.1.0">
+                <input type="text" class="form-control form-control-lg text-center" id="ipBase" value="192.168.1.0" placeholder="Ej: 192.168.1.0">
             </div>
 
             <div class="mb-3">
@@ -169,7 +169,7 @@ def index():
 @app.route('/escanear', methods=['POST'])
 def escanear():
     datos = request.get_json()
-    subred = datos.get('subred', '100.100.100.0/24')
+    subred = datos.get('subred', '192.168.1.0/24')
     ips_activas = []
     try:
         red = ipaddress.IPv4Network(subred, strict=False)
