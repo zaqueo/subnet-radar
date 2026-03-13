@@ -64,7 +64,7 @@ HTML_TEMPLATE = """
             </div>
 
             <div id="alertaGrande" class="alert alert-warning py-2 text-center info-badge mb-3 d-none">
-                Redes grandes pueden tardar varios minutos. Asegurate de tener buena conexion al tunel.
+                Redes grandes pueden tardar varios minutos. Asegurate de estar conectado a la red local.
             </div>
 
             <button id="btnEscanear" class="btn btn-primary btn-lg w-100 mb-4" onclick="iniciarEscaneo()">

@@ -1,6 +1,6 @@
 ﻿# Subnet Radar
 
-Herramienta web para escanear subnets remotas mediante ping masivo en paralelo. Desarrollada para **Ixtanet**.
+Herramienta web para escanear una red local mediante ping masivo en paralelo. Desarrollada para **Ixtanet**.
 
 ## Caracteristicas
 
@@ -55,7 +55,7 @@ Entra a: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 5. Los equipos activos apareceran como links directos a su interfaz web
 
 > **Nota:** Para redes grandes (/20 o menor) el escaneo puede tardar varios minutos.
-> Asegurate de tener conectividad al tunel antes de escanear.
+> Asegurate de estar conectado a la red local antes de escanear.
 
 ---
 
